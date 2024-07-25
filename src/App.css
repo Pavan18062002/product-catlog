@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #14f0f0;
+    color: #150202;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  footer {
+    background-color: #24c8f0;
+    color: #120202;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  /* DataGridComponent Styles */
+  .data-grid-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .data-grid-container {
+      padding: 10px;
+    }
+  }
+  
+  /* ProductDetails Styles */
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .product-details h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .product-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .product-details p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .product-details h1 {
+      font-size: 1.5em;
+    }
+  
+    .product-details p {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-details h1 {
+      font-size: 1.2em;
+    }
+  
+    .product-details p {
+      font-size: 0.9em;
+    }
+  }
+  
+  /* SearchFilter Styles */
+  .search-filter {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 2px;
+  }
+  
+  .search-filter:focus {
+    border-color: #007bff;
+    border-width: 2px;
+  }
+  
+  /* CategoryFilter Styles */
+  .category-filter {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .category-filter:focus {
+    border-color: #007bff;
+    border-width: 2px;
+  }
+  
+  /* Loader Styles */
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #007bff;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

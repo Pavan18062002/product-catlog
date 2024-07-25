@@ -1,44 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import { fetchProductById } from '../api';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { fetchProducts } from '../api';
 import Loader from './Loader';
-import Error from './Error';
-import { Box, Typography } from '@mui/material';
+import '../App.css'
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
 
   useEffect(() => {
     const loadProduct = async () => {
       setLoading(true);
-      setError('');
-      try {
-        const data = await fetchProductById(id);
-        setProduct(data);
-      } catch (error) {
-        setError('Failed to fetch product details');
-      }
+      const data = await fetchProducts();
+      const product = data.products.find((p) => p.sku_code === id);
+      setProduct(product);
       setLoading(false);
     };
-
     loadProduct();
   }, [id]);
 
   if (loading) return <Loader />;
-  if (error) return <Error message={error} />;
-  if (!product) return <Error message="Product not found" />;
+
+  if (!product) return <div>Product not found</div>;
 
   return (
-    <Box>
-      <img src={product.image} alt={product.name} style={{ width: '100%', height: 'auto' }} />
-      <Typography variant="h4">{product.name}</Typography>
-      <Typography variant="body1">Category: {product.category}</Typography>
-      <Typography variant="body1">Price: ${product.price}</Typography>
-      <Typography variant="body2">{product.description}</Typography>
-    </Box>
+    <div  className="product-details">
+      <h1>{product.name}</h1>
+      <img src={product.image} alt={product.name} />
+      <p>Price: {product.price}</p>
+      <p>Description: {product.description}</p>
+    </div>
   );
 };
 
