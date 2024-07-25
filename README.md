@@ -77,12 +77,16 @@ The application fetches data from the following API endpoint:
 - `ProductDetails.js`: Displays detailed information about a selected product.
 - `Loader.js`: Displays a loading spinner during data fetches.
 
-## CSS
+## CSS Styling
 
-- `App.css`: General styling for the application.
-- `SearchFilter.css`: Styling for the search input.
-- `CategoryFilter.css`: Styling for the category dropdown.
-- `DataGridComponent.css`: Styling for the DataGrid border.
+All styling is managed in `App.css`. This file includes:
+
+- **General Styling:** Basic layout and design elements for the application.
+- **Search Filter:** Styling for the search input field, including padding, width, and border radius.
+- **Category Filter:** Styling for the category dropdown, including padding, width, and border radius.
+- **DataGrid:** Border styling for the DataGrid component to improve its appearance.
+- **Responsive Design:** Media queries to ensure the application is responsive on different screen sizes.
+
 
 ## Contributing
 
