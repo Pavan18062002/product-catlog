@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Product Catalog Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a React-based web application for displaying and managing a catalog of products. It features a data grid with search and filter functionalities, pagination, sorting, and a detailed view for each product.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **DataGrid Display:** Uses Material-UI's DataGrid to display products with pagination and sorting.
+- **Search Filter:** Allows users to search products by name.
+- **Category Filter:** Provides a dropdown to filter products by category.
+- **Product Details:** Displays detailed information about each product when clicked.
+- **Responsive Design:** Ensures the application is accessible and user-friendly on various devices.
+- **Error Handling:** Includes error handling and a loading state for a better user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm (v6 or higher) or Yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    cd your-repository
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-### `npm run eject`
+3. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm start
+    # or
+    yarn start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open your browser and go to `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Search and Filter
 
-## Learn More
+- Use the search input to filter products by name.
+- Use the category dropdown to filter products by category.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### DataGrid
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Pagination:** Navigate through pages using the pagination controls.
+- **Sorting:** Click on column headers to sort by price in ascending or descending order.
 
-### Code Splitting
+### Product Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Click on a product row to view detailed information about the product.
 
-### Analyzing the Bundle Size
+## API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application fetches data from the following API endpoint:
 
-### Making a Progressive Web App
+- **Base URL:** `https://catalog-management-system-dev-ak3ogf6zea-uc.a.run.app/cms/products`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Components
 
-### Advanced Configuration
+- `DataGridComponent.js`: Displays the DataGrid with products.
+- `SearchFilter.js`: Provides a search input for filtering products by name.
+- `CategoryFilter.js`: Provides a dropdown for filtering products by category.
+- `ProductDetails.js`: Displays detailed information about a selected product.
+- `Loader.js`: Displays a loading spinner during data fetches.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## CSS
 
-### Deployment
+- `App.css`: General styling for the application.
+- `SearchFilter.css`: Styling for the search input.
+- `CategoryFilter.css`: Styling for the category dropdown.
+- `DataGridComponent.css`: Styling for the DataGrid border.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a new Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions, feel free to contact:
+
+- **G Pavan** - [pavansai0022@gmail.com]
